@@ -16,7 +16,7 @@ def fill_tree(node, start, end):
         return num[start]
     mid = int((start + end)/2)
     tree[node] = fill_tree(node*2, start, mid) + fill_tree(node*2+1, mid + 1, end)
-    return tree[node];
+    return tree[node]
 
 def modify_tree(node, start, end, index, value):
     if index < start or end < index:
